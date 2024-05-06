@@ -1,0 +1,96 @@
+<div class="bodyDiv">
+    <div class="left">
+        <div class="leftUp">
+            <div>
+                <div (click)="to_index()">
+                    <h1>typing</h1>
+                    <h2>.com</h2>
+                </div>
+            </div>
+            <i class="fa-solid fa-house-chimney" (click)="to_index()"></i>
+        </div>
+        <div class="leftDown">
+            <h3>Learn the Foundations of
+                Technology, FREE!
+            </h3>
+            <h4>
+                Build essential skills with our comprehensive
+                curriculum including keyboarding, digital
+                literacy, and coding!
+            </h4>
+        </div>
+    </div><!-- left ->div -->
+    <div class="right">
+        <!-- <div class="rightUp"> -->
+        <div class="Dright">
+
+            <div class="textLogin">
+                <h1>Login</h1>
+                <div>
+                    <p>Don't have an account?</p>
+                    <a routerLink="/register-page">Sign Up Free!</a>
+                    <button mat-button (click)="to_register_page()">Sign Up Free!</button>
+                </div>
+            </div>
+            <div class="DpublicAccount">
+                <div class="textPart">
+                    <p>
+                        Log in with:
+                    </p>
+                </div>
+                <div class="publicAccount">
+                    <div class="googlePart">
+                        <img src="../../assets/icon/google.png" alt="google">
+                        <p>google</p>
+                    </div>
+                    <div class="microsoftPart">
+                        <img src="../../assets/icon/microsoft.png" alt="microsoft">
+                        <p>microsoft</p>
+                    </div>
+                    <div class="clever">
+                        <img src="../../assets/icon/letter-c.png" alt="clever">
+                        <p>clever</p>
+                    </div>
+                    <div class="classLink">
+                        <img src="../../assets/icon/cloud.png" alt="classLink">
+                        <p>classLink</p>
+                    </div>
+                </div>
+            </div><!-- publicAccount ->div -->
+            <!-- </div>rightUp -> -->
+            <!-- <div class="rightDown"> -->
+            <!-- <div class="inputAccount"> -->
+            <!-- <form class="example-form" [formGroup]="form">
+                <mat-form-field class="example-full-width">
+                    <input type="text" matInput formControlName="account">
+                </mat-form-field>
+            </form> -->
+            <form [formGroup]="form" class="inputAccount" >
+                <div class="textEmail">
+                    <p>Username or Email</p>
+                </div>
+                <input type="text" formControlName="account" class="ngClassB" [ngClass]="{ngClassA:isClass}" ng-pattern="/^[A-Za-z0-9]+$/">
+                <!-- <p>{{account}}</p> -->
+                <!-- <p>{{a}}</p> -->
+                <!-- <div *ngIf="isNullFun()">dfsf</div> -->
+                <div class="textEmail">
+                    <p>Password</p>
+                </div>
+                <input type="password" formControlName="password" class="ngClassB" [ngClass]="{ngClassA:isClass}" ng-pattern="/^[A-Za-z0-9]+$/">
+                <!-- [ngClass]要改 要有本身css -->
+                <div class="linkOf">
+                    <!-- <a routerLink="/forget-page">Forgot your login info?</a> -->
+                    <button class="btn" mat-button (click)="to_forget_page()">Forgot your login info?</button>
+                </div>
+            </form>
+            <div class="NextBtn">
+                <!-- <a [routerLink]="['/register-page']">register</a> -->
+                <!-- <a routerLink="/">Next</a> -->
+                <button mat-button (click)="getValue()">Next</button>
+            </div>
+        </div>
+        <!-- rightDown ->div -->
+        <!-- </div> -->
+    </div><!-- right - >div -->
+</div> <!-- bodyDiv -->
+<!-- 15 + 48 + 20(整理 筆記）min -->

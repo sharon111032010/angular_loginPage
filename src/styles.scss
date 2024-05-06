@@ -1,0 +1,55 @@
+@use "@angular/material" as mat;
+/* You can add global styles to this file, and also import other style files */
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+//@import '~@angular/material/theming';
+// @import './my-custom-theme.scss';
+
+// 应用主题
+//@include angular-material-theme($my-app-theme);
+// styles.scss
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css'; 
+// 或者
+// @import './my-custom-theme.scss'; 
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif, verdana;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+/*
+$light-primary: mat.define-palette(mat.$indigo-palette, 500);
+$light-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$light-theme: mat.define-light-theme((color: (primary: $light-primary,
+                accent: $light-accent,
+            ),
+        ));
+
+// define the dark theme palettes
+$dark-primary: mat.define-palette(mat.$blue-gray-palette);
+$dark-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
+
+$dark-theme: mat.define-dark-theme((color: (primary: $dark-primary,
+                accent: $dark-accent,
+            ),
+        ));
+
+body.light-theme {
+    @include mat.all-component-themes($light-theme);
+}
+
+body.dark-theme {
+    @include mat.all-component-themes($dark-theme);
+}
+*/

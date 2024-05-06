@@ -1,0 +1,17 @@
+<!-- <ul>
+    <li *ngFor="let catName of catList">
+        <p style="color:red;">{{catName}}</p>
+        <img [src]="catImgSrc" style="width: 100px;" alt="">
+    </li>
+</ul> -->
+<!-- <ul>
+    <li *ngFor="let catName of catList i=index">
+        <p [ngstyle]="{color:(i+1)%2 ==1?'red':'blue';}">{{catName}}</p>
+        <img [ngClass]={'img-border'}[src]="catImgSrc" style="width: 100px;" alt="">
+    </li>
+</ul> -->
+
+<!-- hidden -->
+<div [hidden]="false" class="a" [ngClass]="{b:isShow}" (click)="touch()">hidden ex</div>
+<div [hidden]="true">hidden ex</div>
+<!-- <div [ngIf]="true">ngif ex</div> -->
