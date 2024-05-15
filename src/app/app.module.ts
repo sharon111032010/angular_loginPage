@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { IndexComponent } from './index/index.component';
 //想修改material的樣式
 //https://material.angular.io/guide/theming
@@ -21,7 +22,6 @@ import { IndexComponent } from './index/index.component';
   declarations: [
     AppComponent,
     LoginPageComponent,
-    //不知道為啥要註解他
     RegisterPageComponent,
     ForgetPageComponent,
     IndexComponent,
@@ -35,12 +35,8 @@ import { IndexComponent } from './index/index.component';
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
-    BrowserAnimationsModule
-
-
-
-
-
+    BrowserAnimationsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
