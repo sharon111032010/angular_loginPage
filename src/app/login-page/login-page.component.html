@@ -21,9 +21,7 @@
         </div>
     </div>
     <div class="right">
-        <!-- <div class="rightUp"> -->
         <div class="Dright">
-
             <div class="textLogin">
                 <h1>Login</h1>
                 <div>
@@ -32,7 +30,7 @@
                     <button mat-button (click)="to_register_page()">Sign Up Free!</button>
                 </div>
             </div>
-            <div class="DpublicAccount">
+            <div class="publicAccountContainer">
                 <div class="textPart">
                     <p>
                         Log in with:
@@ -56,41 +54,25 @@
                         <p>classLink</p>
                     </div>
                 </div>
-            </div><!-- publicAccount ->div -->
-            <!-- </div>rightUp -> -->
-            <!-- <div class="rightDown"> -->
-            <!-- <div class="inputAccount"> -->
-            <!-- <form class="example-form" [formGroup]="form">
-                <mat-form-field class="example-full-width">
-                    <input type="text" matInput formControlName="account">
-                </mat-form-field>
-            </form> -->
-            <form [formGroup]="form" class="inputAccount" >
+            </div>
+            <form [formGroup]="form" class="inputAccount">
                 <div class="textEmail">
                     <p>Username or Email</p>
                 </div>
-                <input type="text" formControlName="account" class="ngClassB" [ngClass]="{ngClassA:isClass}" ng-pattern="/^[A-Za-z0-9]+$/">
-                <!-- <p>{{account}}</p> -->
-                <!-- <p>{{a}}</p> -->
-                <!-- <div *ngIf="isNullFun()">dfsf</div> -->
+                <input type="text" formControlName="account" class="ngClassB" [ngClass]="{ngClassA:isClass}"
+                    ng-pattern="/^[A-Za-z0-9]+$/">
                 <div class="textEmail">
                     <p>Password</p>
                 </div>
-                <input type="password" formControlName="password" class="ngClassB" [ngClass]="{ngClassA:isClass}" ng-pattern="/^[A-Za-z0-9]+$/">
-                <!-- [ngClass]要改 要有本身css -->
+                <input type="password" formControlName="password" class="ngClassB" [ngClass]="{ngClassA:isClass}"
+                    ng-pattern="/^[A-Za-z0-9]+$/">
                 <div class="linkOf">
-                    <!-- <a routerLink="/forget-page">Forgot your login info?</a> -->
                     <button class="btn" mat-button (click)="to_forget_page()">Forgot your login info?</button>
                 </div>
             </form>
-            <div class="NextBtn">
-                <!-- <a [routerLink]="['/register-page']">register</a> -->
-                <!-- <a routerLink="/">Next</a> -->
+            <div class="nextBtn">
                 <button mat-button (click)="getValue()">Next</button>
             </div>
         </div>
-        <!-- rightDown ->div -->
-        <!-- </div> -->
-    </div><!-- right - >div -->
-</div> <!-- bodyDiv -->
-<!-- 15 + 48 + 20(整理 筆記）min -->
+    </div>
+</div>
