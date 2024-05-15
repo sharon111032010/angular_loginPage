@@ -7,9 +7,9 @@
 // 应用主题
 //@include angular-material-theme($my-app-theme);
 // styles.scss
-// @import '~@angular/material/prebuilt-themes/indigo-pink.css'; 
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 // 或者
-// @import './my-custom-theme.scss'; 
+// @import './my-custom-theme.scss';
 
 * {
     margin: 0px;
@@ -21,9 +21,17 @@
 html,
 body {
     height: 100%;
+    margin: 0
 }
 
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.mat-typography{
+  margin: 0;
+
+}
+.mat-typography p{
+  margin: 0;
 }
