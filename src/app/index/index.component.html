@@ -28,19 +28,10 @@
     <div class="board">
         <div class="boardContainer">
             <div class="sidebar">
-                <div class="sidebarContent">
-                    <p>Lorem it</p>
+                <div class="sidebarContent" *ngFor="let item of sidebarContent">
+                    <p>{{ item.title }}</p>
                     <div class="sidebarBtnContainer">
-                        <button mat-raised-button>Lorem, ipsum </button>
-                        <button mat-raised-button>Lorem, ipsum </button>
-                        <button mat-raised-button>Lorem, ipsum </button>
-                    </div>
-                </div>
-                <div class="sidebarContent">
-                    <p>Lorem it</p>
-                    <div class="sidebarBtnContainer">
-                        <button>Lorem, ipsum </button>
-                        <button>Lorem, ipsum.</button>
+                        <button mat-raised-button *ngFor="let btn of item.buttons">{{ btn }}</button>
                     </div>
                 </div>
             </div>
@@ -52,63 +43,12 @@
                         <button>Lorem, ipsum.</button>
                     </div>
                 </div>
-                <div class="section-container">
-                    <span>Getting Start</span>
+                <div class="section-container" *ngFor="let section of sectionContainer">
+                    <span>{{ section.title }}</span>
                     <div class="section-content">
-                        <div class="section-content-block">
-                            <div class="section-content-block-num">1</div>
-                            <p>learson</p>
-                            <button>start</button>
-                        </div>
-                        <div class="section-content-block">
-                            <div class="section-content-block-num">2</div>
-                            <p>learson</p>
-                            <button>start</button>
-                        </div>
-                        <div class="section-content-block">
-                            <div class="section-content-block-num">3</div>
-                            <p>learson</p>
-                            <button>start</button>
-                        </div>
-                    </div>
-                    <p>listen</p>
-                    <div class="section-content">
-                        <div class="section-content-block">
-                            <div class="section-content-block-num">1</div>
-                            <p>learson</p>
-                            <button>start</button>
-                        </div>
-                        <div class="section-content-block">
-                            <div class="section-content-block-num">2</div>
-                            <p>learson</p>
-                            <button>start</button>
-                        </div>
-                        <div class="section-content-block">
-                            <div class="section-content-block-num">3</div>
-                            <p>learson</p>
-                            <button>start</button>
-                        </div>
-                        <div class="section-content-block">
-                            <div class="section-content-block-num">3</div>
-                            <p>learson</p>
-                            <button>start</button>
-                        </div>
-                    </div>
-                    <p>Getting Start</p>
-                    <div class="section-content">
-                        <div class="section-content-block">
-                            <div class="section-content-block-num">1</div>
-                            <p>learson</p>
-                            <button>start</button>
-                        </div>
-                        <div class="section-content-block">
-                            <div class="section-content-block-num">2</div>
-                            <p>learson</p>
-                            <button>start</button>
-                        </div>
-                        <div class="section-content-block">
-                            <div class="section-content-block-num">3</div>
-                            <p>learson</p>
+                        <div class="section-content-block" *ngFor="let lesson of section.lessons; let i = index">
+                            <div class="section-content-block-num">{{ i + 1 }}</div>
+                            <p>{{ lesson }}</p>
                             <button>start</button>
                         </div>
                     </div>
