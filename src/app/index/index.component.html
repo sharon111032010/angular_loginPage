@@ -31,7 +31,9 @@
                 <div class="sidebarContent" *ngFor="let item of sidebarContent">
                     <p>{{ item.title }}</p>
                     <div class="sidebarBtnContainer">
-                        <button mat-raised-button *ngFor="let btn of item.buttons">{{ btn }}</button>
+                        <div *ngFor="let btn of item.buttons">
+                            <button mat-raised-button>{{ btn }}</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -49,7 +51,7 @@
                         <div class="section-content-block" *ngFor="let lesson of section.lessons; let i = index">
                             <div class="section-content-block-num">{{ i + 1 }}</div>
                             <p>{{ lesson }}</p>
-                            <button>start</button>
+                            <button (click)="startCount()">start</button>
                         </div>
                     </div>
                 </div>

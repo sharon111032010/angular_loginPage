@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { StartDialogComponent } from '../start-dialog/start-dialog.component';
 
 @Component({
   selector: 'app-index',
@@ -24,14 +26,23 @@ export class IndexComponent {
       buttons: ['Lorem, ipsum 1', 'Lorem, ipsum 2']
     }
   ];
-  start(){
+  constructor(private router:Router,private dialog: MatDialog) { } // <-- 注入router:Router
+
+  startCount() {
+    const dialogRef = this.dialog.open(StartDialogComponent, {
+      width: '250px',
+      data: { message: 'Dialog content goes here' }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
   ngOnInit(): void {
   }
-  constructor(private router:Router) { } // <-- 注入router:Router
   
   to_indexPage() {
-    this.router.navigate(['/forget-page']);
+    // this.router.navigate(['/forget-page']);
   }
 
 }

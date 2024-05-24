@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
@@ -15,8 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { IndexComponent } from './index/index.component';
-//想修改material的樣式
-//https://material.angular.io/guide/theming
+import{ MatDialogModule} from '@angular/material/dialog';
+import { StartDialogComponent } from './start-dialog/start-dialog.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +24,7 @@ import { IndexComponent } from './index/index.component';
     RegisterPageComponent,
     ForgetPageComponent,
     IndexComponent,
+    StartDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +36,8 @@ import { IndexComponent } from './index/index.component';
     MatDividerModule,
     MatIconModule,
     BrowserAnimationsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
